@@ -1,11 +1,11 @@
 const express = require("express");
-const loginRoutes = require("./routes/loginRoutes");
+const tokensRoutes = require("./routes/tokensRoutes");
 const rolesRoutes = require("./routes/rolesRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use("/", loginRoutes);
+app.use("/", tokensRoutes);
 app.use("/", rolesRoutes);
 
 app.listen(PORT, () => {
